@@ -1,0 +1,28 @@
+Create a candle store database
+
+CREATE TABLE candleshop (id integer primary key, item TEXT, fragrancetype TEXT, price INTEGER, popularity INTEGER);
+
+INSERT INTO candleshop VALUES (1, "macintosh apple", "fruity", 12.99, 5);
+INSERT INTO candleshop VALUES (2, "pecan pie", "gourmand", 10.99, 3);
+INSERT INTO candleshop VALUES (3, "patchouili", "earthy", 10.99, 6);
+INSERT INTO candleshop VALUES (4, "strawberry cupcake", "gourmand", 12.99, 1);
+INSERT INTO candleshop VALUES (5, "orange peel", "fruity", 12.99, 9);
+INSERT INTO candleshop VALUES (6, "lemongrass", "earthy", 9.99, 4);
+INSERT INTO candleshop VALUES (7, "lemon verbena", "fresh", 11.99, 2);
+INSERT INTO candleshop VALUES (8, "sleigh bells", "seasonal", 14.99, 11);
+INSERT INTO candleshop VALUES (9, "amber musk", "earthy", 12.99, 14);
+INSERT INTO candleshop VALUES (10, "pineapple paradise", "fruity", 14.99, 15);
+INSERT INTO candleshop VALUES (11, "watermelon", "fruity", 11.99, 13);
+INSERT INTO candleshop VALUES (12, "teakwood", "earthy", 14.99, 12);
+INSERT INTO candleshop VALUES (13, "pumpkin spice", "gourmand", 13.99, 8);
+INSERT INTO candleshop VALUES (14, "cucumber melon", "fruity", 14.99, 6);
+INSERT INTO candleshop VALUES (15, "candy cane", "gourmand", 15.99, 7);
+
+Display database ordered by price
+SELECT * FROM candleshop ORDERED BY price;
+
+Averge price of candles in the fragrance type "earthy"
+SELECT AVG(price) FROM candleshop where fragrancetype="earthy";
+
+What are the 3 most popular items?
+SELECT * FROM candleshop ORDER BY popularity limit 3;
